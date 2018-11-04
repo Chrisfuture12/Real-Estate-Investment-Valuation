@@ -48,6 +48,7 @@ namespace calc
             double ACost = chris.getAgentCost();
             double PProfit = chris.getProjectedProfit(ACost,TAICost);
             double ROI = chris.getROI(PProfit,CRquired);
+            double ARVP = chris.getARVP(TAICost);
 
             if (PProfit > 0){
                 Console.WriteLine();
@@ -55,7 +56,7 @@ namespace calc
                 Console.WriteLine("\tThe Profit is at $"+PProfit+". Which means you will not lose money on this deal.");
             }
 
-            double [] summary = new double[10];
+            double [] summary = new double[11];
             summary[0] = TCNeeded;
             summary[1] = MTCBFinanced;
             summary[2] = Interest;
@@ -66,8 +67,9 @@ namespace calc
             summary[7] = ACost;
             summary[8] = PProfit;
             summary[9] = ROI;
+            summary[10] = ARVP;
 
-            string [] names = new string[10];
+            string [] names = new string[11];
             names[0] = "Total capital needed";
             names[1] = "Max amount that can be financed";
             names[2] = "Interest ($)";
@@ -78,6 +80,7 @@ namespace calc
             names[7] = "Agent cost ($)";
             names[8] = "Projected profit";
             names[9] = "ROI (Return on income)";
+            names[10] = "% of ARV";
 
             display("\tDeal summary:");
     

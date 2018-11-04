@@ -88,6 +88,8 @@ namespace calc
         public double getROI(double ProjectedProfit, double CashRequired){
             return ProjectedProfit/CashRequired *100;
         }
-         
+        public double getARVP(double TotalAllInCost){
+            return (TotalAllInCost/ARV)*100;
+        }
     }
 }
