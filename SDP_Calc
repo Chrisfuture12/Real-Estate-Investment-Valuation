@@ -1,0 +1,66 @@
+1. User input:
+---------------
+Property address or name
+Purchase price 
+closing cost
+holding cost 
+
+rehab budget 
+project rehab period
+
+financing assuptions:
+max % of cost to be financed
+origination/discount points
+other closing costs paid to lender
+points and closing cost upfront or back-end
+interest rate
+
+flip analysis:
+after repair value
+months to complete sale
+projected resale price
+projected cost of sale (%)
+____________________________
+
+
+2. Output (math expressions)
+---------------
+Total capital needed = (Purchase price + closing cost + holding cost + rehab budget)
+max $ that can be financed = (total capital - (closing cost + holding cost)) * Max % of Cost to be financed
+actual to be finaced = (max $ that can be financed)
+closing holding cost/interest added to loan = closing cost + holding cost 
+total loan amnt = (max $ that can be financed) + closing holding cost/interest added to loan
+Cash Required (over life of project) = Total capital needed - (closing cost + holding cost + max $ that can be financed)
+total all in cost = Total capital needed + Interest AMT
+% of arv = (total all in cost/ARV)
+
+
+agent cost = projected resale * projected cost of sale (%)
+projected profit = projected resale - agent cost - total all in cost.
+roi = projected profit \ total all in cost * 100
+anualized roi =
+______________________________
+
+3. Modularized 
+---------------------
+main method
+display method
+get input
+_______________
+
+4. classes and objects:
+--------------------
+main class: main, display, input methods
+calc class: calculate all of the required outputs
+______________
+5. selection statement (If,else, switch,case,default)
+-------------
+if projected profit is above zero then print this is a good project.
+________________
+6. loop statement (for, while, foreach,dowhile)
+----------------
+while any input 
+
+7. arrays 
+-------------
+can we store input into our array?

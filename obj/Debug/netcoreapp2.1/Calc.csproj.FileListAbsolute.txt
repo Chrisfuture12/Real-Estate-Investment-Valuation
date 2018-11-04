@@ -1,0 +1,11 @@
+/home/chris/Documents/Machine Learning/1. CRM/software/Calc/obj/Debug/netcoreapp2.1/Calc.csprojAssemblyReference.cache
+/home/chris/Documents/Machine Learning/1. CRM/software/Calc/obj/Debug/netcoreapp2.1/Calc.csproj.CoreCompileInputs.cache
+/home/chris/Documents/Machine Learning/1. CRM/software/Calc/obj/Debug/netcoreapp2.1/Calc.AssemblyInfoInputs.cache
+/home/chris/Documents/Machine Learning/1. CRM/software/Calc/obj/Debug/netcoreapp2.1/Calc.AssemblyInfo.cs
+/home/chris/Documents/Machine Learning/1. CRM/software/Calc/bin/Debug/netcoreapp2.1/Calc.deps.json
+/home/chris/Documents/Machine Learning/1. CRM/software/Calc/bin/Debug/netcoreapp2.1/Calc.runtimeconfig.json
+/home/chris/Documents/Machine Learning/1. CRM/software/Calc/bin/Debug/netcoreapp2.1/Calc.runtimeconfig.dev.json
+/home/chris/Documents/Machine Learning/1. CRM/software/Calc/bin/Debug/netcoreapp2.1/Calc.dll
+/home/chris/Documents/Machine Learning/1. CRM/software/Calc/bin/Debug/netcoreapp2.1/Calc.pdb
+/home/chris/Documents/Machine Learning/1. CRM/software/Calc/obj/Debug/netcoreapp2.1/Calc.dll
+/home/chris/Documents/Machine Learning/1. CRM/software/Calc/obj/Debug/netcoreapp2.1/Calc.pdb
