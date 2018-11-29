@@ -15,46 +15,53 @@ namespace calc
             double userIN = double.Parse(input);
             return userIN;
         }
+        public static string getInputS(string x){
+            string inputS;
+            Console.WriteLine("Please enter the "+ x);
+            inputS = Console.ReadLine();
+            return inputS;
+        }
+
 
         public static void display(string x){
             Console.WriteLine(x);
-
         }
 
         public static void Main(){
+            // General Info
+            display("The following inputs are directed towards a valuation of a Real estate investment which will be bought, sold , and requires financing.");
             double PPrice = getInput("Purchase price");
             double CCost = getInput("Closing cost");
             double HCost = getInput("Holding cost");
             double RBudget = getInput("Rehab budget");
             double PRehabPeriod = getInput("Estimated project rehab period (Months).");
-            double PCostFinanced = getInput("percent of the total cost of which will be financed");
-            double ODPoints = getInput(" origination/discount points associated with the loan");
-            double OCCTLender = getInput("Other closing cost paid to lender");
-            double Irate = getInput("interest rate of the loan");
             double ARV = getInput("After Repair Value (ARV)");
             double MTCsale = getInput("Months to complete sale (Listing to close)");
             double PRPrice = getInput("projected resale price");
             double PCOSale = getInput("projected cost of sale");
+            double PCostFinanced = getInput("percent of the total cost of which will be financed"); 
+            double ODPoints = getInput(" origination/discount points associated with the loan"); 
+            double OCCTLender = getInput("Other closing cost paid to lender");
+            double Irate = getInput("interest rate of the loan");
             
             REcalc_1 chris = new REcalc_1(PPrice,CCost,HCost,RBudget,PRehabPeriod,PCostFinanced,ODPoints, OCCTLender, Irate, ARV, MTCsale, PRPrice, PCOSale);
-           
+            
+            
+        //  Finance (Loan) Options:
+        
+        // General calculations
             double TCNeeded = chris.getTotCapNeeded();
             double MTCBFinanced = chris.getMaxFinancable(TCNeeded);
-            double Interest = chris.getInterest(MTCBFinanced);
-            double CHCAInterest = chris.getClosingHoldingInterest(Interest);
-            double TLAmount = chris.getTotalLoanAmount(Interest,MTCBFinanced);
             double CRquired = chris.getCashRequired(TCNeeded, MTCBFinanced);
+            double Interest = chris.getInterest(MTCBFinanced);
             double TAICost = chris.getTotalAllInCost(TCNeeded, Interest);
             double ACost = chris.getAgentCost();
             double PProfit = chris.getProjectedProfit(ACost,TAICost);
             double ROI = chris.getROI(PProfit,CRquired);
             double ARVP = chris.getARVP(TAICost);
-
-            if (PProfit > 0){
-                Console.WriteLine();
-                Console.WriteLine();
-                Console.WriteLine("\tThe Profit is at $"+PProfit+". Which means you will not lose money on this deal.");
-            }
+        // loan calc
+            double CHCAInterest = chris.getClosingHoldingInterest(Interest);
+            double TLAmount = chris.getTotalLoanAmount(Interest,MTCBFinanced);
 
             double [] summary = new double[11];
             summary[0] = TCNeeded;
@@ -87,9 +94,12 @@ namespace calc
             for(int i = 0; i < summary.Length; i++){
                 display("\t" + names[i] + ": " + summary[i]);
             } 
-
-            Console.ReadKey();
-            
+            if (PProfit > 0){
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("\tThe Profit is at $"+PProfit+". Which means you will not lose money on this deal.");
+            }
+            Console.ReadKey();   
         }
     }
 }

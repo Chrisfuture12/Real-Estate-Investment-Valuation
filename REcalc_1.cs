@@ -25,19 +25,19 @@ namespace calc
 
         public REcalc_1() // Zero parameters
         {
-            PurchasePrice = 1;
-            ClosingCost = 1;
-            HoldingCost = 1;
-            RehabBudget = 1;
-            ProjectRehabPeriod = 1;
-            PercentOfCostFinanced = 1/100;
-            Origination_DiscountPoints = 1/100;
-            OtherClosingCostToLender = 1;
-            InterestRate = 1/100;
-            ARV = 1;
-            MonthsToCompleteSale = 1;
-            ProjectedResalePrice = 1;
-            ProjectedCostOfSale = 1/100;
+            PurchasePrice = 0;
+            ClosingCost = 0;
+            HoldingCost = 0;
+            RehabBudget = 0;
+            ProjectRehabPeriod = 0;
+            PercentOfCostFinanced = 0;
+            Origination_DiscountPoints = 0;
+            OtherClosingCostToLender = 0;
+            InterestRate = 0;
+            ARV = 0;
+            MonthsToCompleteSale = 0;
+            ProjectedResalePrice = 0;
+            ProjectedCostOfSale = 0;
         }
 
        public REcalc_1(double a, double b, double c, double d, double e, double f, double g, double h, double i, double j, double k, double l, double m )
@@ -47,16 +47,44 @@ namespace calc
             HoldingCost=c;
             RehabBudget=d;
             ProjectRehabPeriod=e;
-            PercentOfCostFinanced=f/100;
-            Origination_DiscountPoints=g/100;
+
+            PercentOfCostFinanced=f;
+            if (PercentOfCostFinanced < 1){
+                PercentOfCostFinanced = f;
+            } else {
+                PercentOfCostFinanced = f/100;
+            }
+            
+            Origination_DiscountPoints=g;
+            if (Origination_DiscountPoints < 1){
+                Origination_DiscountPoints = g;
+            } else {
+                Origination_DiscountPoints = g/100;
+            }
+
             OtherClosingCostToLender=h;
-            InterestRate = i/100;
+
+            InterestRate = i;
+            if (InterestRate < 1){
+                InterestRate = i;
+            } else {
+                InterestRate = i/100;
+            } 
+                
             ARV=j;
             MonthsToCompleteSale=k;
             ProjectedResalePrice=l;
-            ProjectedCostOfSale=m/100;
+
+            ProjectedCostOfSale=m;
+            if (ProjectedCostOfSale < 1){
+                ProjectedCostOfSale =m;
+            } else {
+                ProjectedCostOfSale=m/100;
+            }
             
         }
+
+        
 
         public double getTotCapNeeded(){
             return PurchasePrice + ClosingCost + HoldingCost + RehabBudget;
