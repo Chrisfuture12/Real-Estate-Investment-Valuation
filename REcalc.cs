@@ -38,7 +38,7 @@ namespace calc
             double ARV = getInput("After Repair Value (ARV)");
             double MTCsale = getInput("Months to complete sale (Listing to close)");
             double PRPrice = getInput("projected resale price");
-            double PCOSale = getInput("projected cost of sale");
+            double PCOSale = getInput("projected cost of sale (Agent %)");
             double PCostFinanced = getInput("percent of the total cost of which will be financed"); 
             double ODPoints = getInput(" origination/discount points associated with the loan"); 
             double OCCTLender = getInput("Other closing cost paid to lender");
