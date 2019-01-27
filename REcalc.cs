@@ -85,7 +85,7 @@ namespace calc
             names[5] = "upfront Cash required";
             names[6] = "Total all-in cost";
             names[7] = "Agent cost ($)";
-            names[8] = "Projected profit";
+            names[8] = "Projected profit $";
             names[9] = "ROI (Return on income)";
             names[10] = "% of ARV";
 
@@ -98,6 +98,8 @@ namespace calc
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("\tThe Profit is at $"+PProfit+". Which means you will not lose money on this deal.");
+            } else {
+                Console.WriteLine("You will lose money on this deal.");
             }
             Console.ReadKey();   
         }
